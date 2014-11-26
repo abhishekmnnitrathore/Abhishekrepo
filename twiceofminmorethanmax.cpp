@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+ 
+// A utility function to find minimum of two numbers
+int min(int a, int b) {return (a < b)? a : b;}
+ 
+// A utility function to find minimum in arr[l..h]
+int min(int arr[], int l, int h)
+{
+    int mn = arr[l];
+    for (int i=l+1; i<=h; i++)
+       if (mn > arr[i])
+         mn = arr[i];
+    return mn;
+}
+ 
+int max(int arr[], int l, int h)
+{
+    int mx = arr[l];
+    for (int i=l+1; i<=h; i++)
+       if (mx < arr[i])
+         mx = arr[i];
+    return mx;
+}
+ 
+int minRemovalsDP(int arr[], int n)
+{
+    int table[n][n], gap, i, j, mn, mx;
+ 
+    for (gap = 0; gap < n; ++gap)
+    {
+        for (i = 0, j = gap; j < n; ++i, ++j)
+        {
+            mn = min(arr, i, j);
+            mx = max(arr, i, j);
+            cout<<"i = "<<i<<" j= "<<j<<endl;
+            cout<<"min = "<<mn<<" max = "<<mx<<endl;
+            table[i][j] = (2*mn > mx)? 0: min(table[i][j-1]+1,
+                                              table[i+1][j]+1);
+          cout<<"table_i_j-1 ="<<table[i][j-1]<<" table_i+1_j = "<<table[i+1][j]<<endl;
+        }
+    }
+    for(int i=0;i<n;i++)
+     {
+         for(int j=0;j<n;j++)
+          {
+             cout<<table[i][j]<<" "; 
+          }
+         cout<<endl;
+     }
+    return table[0][n-1];
+}
+ 
+// Driver program to test above functions
+int main()
+{
+  int arr[] = {20, 4, 1, 3};
+  int n = sizeof(arr)/sizeof(arr[0]);
+  cout << minRemovalsDP(arr, n)<<endl;
+  return 0;
+}

@@ -1,0 +1,36 @@
+i = 0 j= 0
+min = 20 max = 20
+table_i_j-1 =0 table_i+1_j = 0
+i = 1 j= 1
+min = 4 max = 4
+table_i_j-1 =0 table_i+1_j = 1
+i = 2 j= 2
+min = 1 max = 1
+table_i_j-1 =1 table_i+1_j = -1217227392
+i = 3 j= 3
+min = 3 max = 3
+table_i_j-1 =-1217227392 table_i+1_j = -1219788373
+i = 0 j= 1
+min = 4 max = 20
+table_i_j-1 =0 table_i+1_j = 0
+i = 1 j= 2
+min = 1 max = 4
+table_i_j-1 =0 table_i+1_j = 0
+i = 2 j= 3
+min = 1 max = 3
+table_i_j-1 =0 table_i+1_j = 0
+i = 0 j= 2
+min = 1 max = 20
+table_i_j-1 =1 table_i+1_j = 1
+i = 1 j= 3
+min = 1 max = 4
+table_i_j-1 =1 table_i+1_j = 1
+i = 0 j= 3
+min = 1 max = 20
+table_i_j-1 =2 table_i+1_j = 2
+0 1 2 3 
+0 0 1 2 
+1 1 0 1 
+-1217215324 -1217215216 -1217227392 0 
+3
+ 

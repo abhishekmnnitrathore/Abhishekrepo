@@ -1,0 +1,14 @@
+# include<iostream>
+using namespace std;
+munna(int &p)
+{
+  cout<<"value of p= "<<p;
+}
+int main()
+{
+  int a;
+  int &P=a;
+ munna(p);
+ return 0;
+}
+
